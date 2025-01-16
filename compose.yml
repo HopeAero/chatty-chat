@@ -1,12 +1,12 @@
 services:
   chatty-chat:
-  ports:
-    - 3001:3001
-  build:
-    context: .
-  depends_on:
-    chatty-chat-db:
-      condition: service_healthy
+    ports:
+      - 3001:3001
+    build:
+      context: .
+    depends_on:
+      chatty-chat-db:
+        condition: service_healthy
 
   chatty-chat-db:
     image: mongo:latest
